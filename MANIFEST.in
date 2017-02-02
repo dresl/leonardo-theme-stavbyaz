@@ -1,0 +1,5 @@
+include MANIFEST.in
+include README.rst
+recursive-include leonardo_theme_stavbyaz/static *
+recursive-include leonardo_theme_stavbyaz/locale *
+recursive-include leonardo_theme_stavbyaz/templates *
