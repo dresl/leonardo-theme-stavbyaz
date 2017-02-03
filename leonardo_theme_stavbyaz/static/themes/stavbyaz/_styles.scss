@@ -1,7 +1,234 @@
-
-// Styles
-// --------------------------------------------------
-
 // Vendor Components
 @import "/bootstrap/scss/bootstrap";
 
+body {
+    width: 100%;
+    height: 100%;
+    font-family: $font-default;
+    color: black;
+    background-color: white;
+    overflow-y: scroll;
+    padding: 0px!important;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.padding-top {
+    padding-top: 100px;
+}
+
+.leonardo-region, .region-tools {
+    z-index: 3;
+}
+
+h1.main_heading {
+    font-family: Arial;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+// Navigation
+
+#main_nav {
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: none;
+    background-color: #fff;
+    transition: all 0.5s;
+    .navbar-nav > li {
+        text-align: center;
+        a {
+            color: #009528; 
+            font-size: 16px;
+            font-weight: bold;
+            &:active, &:focus, &:hover { 
+                color: #009528; 
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+    }
+    .navbar-brand {
+        width: 480px;
+        font-weight: bold;
+        font-size: 16px;
+        color: #009528;
+        &:active, &:focus, &:hover { 
+            color: #009528; 
+        }
+        > span {
+            font-weight: normal;
+        }
+        > img {
+            float: left;
+            margin-right: 0;
+            margin-top: -25px;
+            height: 75px;
+            width: auto;
+            transition: all 0.5s;
+        }
+    }
+}
+
+.telephone-num {
+    color: white;
+    font-size: 25px;
+    margin: 0;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+}
+
+#main_nav.top-nav-collapse {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #dedede;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.3);
+    .navbar-brand > img {
+        height: 45px;
+        width: auto;
+        margin-top: -11px;
+    }
+}
+
+.border-light {
+  height: 4px;
+  background-color: white;
+  display: block;
+  margin: 0 auto;
+  transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+}
+
+.border-green {
+  height: 4px;
+  background-color: #87d139;
+  display: block;
+  margin: 0 auto;
+  transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+}
+
+// intro body
+
+.bg-intro {
+    color: white;
+    display: table;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: black;
+    background-position: center;
+    .intro-body {
+        display: table-cell;
+        vertical-align: top;
+        padding-top: 150px;
+        .brand-heading {
+            font-size: 100px;
+        }
+        .intro-text {
+            font-size: 26px;
+        }
+    }
+}
+
+// nav green areas
+
+.arrow-down {
+    width: 22px;
+    position: absolute;
+    height: 28px;
+    border-left: 79px solid transparent;
+    border-right: 179px solid transparent;
+    border-top: 34px solid #87d139;
+    z-index: 1;
+    right: 0;
+    top: 90px;
+    transition: all 0.5s ease;
+}
+
+.arrow-down2 {
+    width: 22px;
+    position: absolute;
+    height: 28px;
+    border-left: 90px solid transparent;
+    border-right: 198px solid transparent;
+    border-top: 40px solid white;
+    z-index: 1;
+    right: -19px;
+    top: 90px;
+    transition: all 0.5s ease;
+}
+
+.arrow-responsible {
+    top: 50px;
+}
+
+.area-color-responsible {
+    height: 50px!important;
+    border-top-width: 50px!important;
+}
+
+.green-area {
+    position: absolute;
+    width: 277px;
+    border-left: 60px solid rgb(134, 29, 29);
+    border-right: none;
+    border-top: 90px solid #87d139;
+    right: 0;
+    top: 0;
+    height: 90px;
+    transition: all 0.5s ease;
+}
+
+.white-area {
+    position: absolute;
+    width: 112px;
+    border-left: 50px solid rgb(255, 255, 255);
+    border-right: 49px solid rgb(135, 209, 57);
+    border-top: 90px solid #ffffff;
+    right: 209px;
+    top: 0;
+    height: 90px;
+    transition: all 0.5s ease;
+}
+
+// intro staby od a po z
+
+.stavby_troj_AZ {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(/static/img/stavby_troj.png);
+    background-position: bottom center;
+    background-size: cover;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* smartphones */
+@media only screen and (max-width: 760px) {
+}
+
+::-moz-selection {
+    text-shadow: none;
+    background: rgba($primary, 0.6);
+    color: white;
+}
+
+::selection {
+    text-shadow: none;
+    background: rgba($primary, 0.6);
+    color: white;
+}
