@@ -20,7 +20,7 @@ html {
     padding-top: 100px;
 }
 
-.leonardo-region, .region-tools {
+.leonardo-region, .region-tools, .leonardo-widget {
     z-index: 3;
 }
 
@@ -143,34 +143,34 @@ h1.main_heading {
 
 // nav green areas
 
-.arrow-down {
-    width: 22px;
-    position: absolute;
-    height: 28px;
-    border-left: 79px solid transparent;
-    border-right: 179px solid transparent;
-    border-top: 34px solid #87d139;
-    z-index: 1;
-    right: 0;
-    top: 90px;
-    transition: all 0.5s ease;
-}
-
 .arrow-down2 {
     width: 22px;
     position: absolute;
     height: 28px;
     border-left: 90px solid transparent;
-    border-right: 198px solid transparent;
-    border-top: 40px solid white;
+    border-right: 222px solid transparent;
+    border-top: 41px solid #ffffff;
     z-index: 1;
-    right: -19px;
-    top: 90px;
+    right: -39px;
+    top: 88px;
+    transition: all 0.5s ease;
+}
+
+.arrow-down {
+    width: 22px;
+    position: absolute;
+    height: 28px;
+    border-left: 80px solid transparent;
+    border-right: 179px solid transparent;
+    border-top: 34px solid #87d139;
+    z-index: 1;
+    right: 0;
+    top: 88px;
     transition: all 0.5s ease;
 }
 
 .arrow-responsible {
-    top: 50px;
+    top: 49px;
 }
 
 .area-color-responsible {
@@ -183,10 +183,10 @@ h1.main_heading {
     width: 277px;
     border-left: 60px solid rgb(134, 29, 29);
     border-right: none;
-    border-top: 90px solid #87d139;
+    border-top: 89px solid #87d139;
     right: 0;
     top: 0;
-    height: 90px;
+    height: 89px;
     transition: all 0.5s ease;
 }
 
@@ -195,10 +195,10 @@ h1.main_heading {
     width: 112px;
     border-left: 50px solid rgb(255, 255, 255);
     border-right: 49px solid rgb(135, 209, 57);
-    border-top: 90px solid #ffffff;
+    border-top: 89px solid #ffffff;
     right: 209px;
     top: 0;
-    height: 90px;
+    height: 89px;
     transition: all 0.5s ease;
 }
 
