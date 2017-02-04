@@ -160,7 +160,7 @@ h1.main_heading {
     width: 22px;
     position: absolute;
     height: 28px;
-    border-left: 80px solid transparent;
+    border-left: 78px solid transparent;
     border-right: 179px solid transparent;
     border-top: 34px solid #87d139;
     z-index: 1;
@@ -215,6 +215,38 @@ h1.main_heading {
     top: 0;
     left: 0;
     right: 0;
+}
+
+// fullscreen linked page
+
+.absolute-anchor {
+    position: absolute;
+    margin-top: -80px;
+    width: 1px;
+    height: 1px;
+}
+
+section.container-fluid {
+    padding: 0;
+    .col-xs-12, .container-fluid {
+        padding: 0;
+    }
+    div[class*='web-htmltextwidget'] {
+        padding: 0;
+    }
+}
+
+.no-margin p {
+    margin: 0;
+}
+
+.bg-one {
+    background-image: url(/static/img/2_slide_troj.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    padding-bottom: 200px;
+    background-size: 100%;
+    padding-top: 58px;
 }
 
 /* smartphones */

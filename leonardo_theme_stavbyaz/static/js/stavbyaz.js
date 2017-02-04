@@ -20,11 +20,11 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-$('a[href="/#aktuality"]').bind('click', function(event) {
+$('a[href="/#main_content"]').bind('click', function(event) {
     var $anchor = $(this);
     $('html, body').stop().animate({
         scrollTop: ($($anchor.attr('href').replace("/", "")).offset().top - 1)
-    }, 1500, 'easeInOutExpo');
+    }, 1200, 'easeInOutExpo');
     event.preventDefault();
 });
 
