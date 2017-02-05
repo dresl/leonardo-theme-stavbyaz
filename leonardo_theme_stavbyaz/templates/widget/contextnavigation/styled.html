@@ -25,12 +25,38 @@ function centerHTMLtext{{ forloop.counter }}() {
         {% endif %}
     }, 1);
 }
+
 $(function(){
     centerHTMLtext{{ forloop.counter }}();
 });
 $(window).resize(function()  {
     centerHTMLtext{{ forloop.counter }}();
 });
+
 </script>
 {% endfor %}
+<script type="text/javascript">
+function kontaktGreenArrow() {
+    setTimeout(function(){
+        var z = $('.bg-nine').width();
+        var o = 1920 - z;
+        var x = (o*100)/1920;
+        var y = (441*x)/100;
+        var height = 441-y;
+        $('.bg-nine').css("height", height)
+
+        var a = $('.bg-nine').height();
+        var b = $('#preview-10').children()[0].scrollHeight;
+        var c = a - b;
+        var total = c/2 - 5;
+        $('#preview-10').children()[0].style.marginTop = total + "px";
+    }, 1);
+}
+$(function(){
+    kontaktGreenArrow();
+});
+$(window).resize(function()  {
+    kontaktGreenArrow();
+});
+</script>
 {% endblock %}

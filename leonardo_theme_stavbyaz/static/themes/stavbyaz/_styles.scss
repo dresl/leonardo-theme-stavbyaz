@@ -227,6 +227,7 @@ h1.main_heading {
 }
 
 section.container-fluid {
+    background-image: url(/static/img/bile_pozadi_struktura.jpg);
     padding: 0;
     .col-xs-12, .container-fluid {
         padding: 0;
@@ -292,7 +293,6 @@ section.container-fluid {
 }
 
 .bg-nine {
-    padding: 100px 0;
     background-image: url(/static/img/kontakt_troj_up.png);
     background-repeat: no-repeat;
     background-position: center;
