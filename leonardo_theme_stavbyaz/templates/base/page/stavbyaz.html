@@ -11,8 +11,8 @@
       $(document).ready(function() {
         $("body").backgroundCycle({
           imageUrls: [
-            "{% static 'img/uvodka_1.jpg'%}",
-            "{% static 'img/uvodka_2.jpg'%}",
+            "{% static 'img/uvodni_fotka_1.jpg'%}",
+            "{% static 'img/uvodni_fotka_2.jpg'%}",
           ],
           fadeSpeed: 1000,
           duration: 4000,
@@ -64,12 +64,35 @@
         {% feincms_render_region feincms_page "col2" request %}
         {% render_region_tools feincms_page "col2" request %}
       </section> -->
+    {% if request.path == '/' %}
     </section>
-    <footer>
-      <div class="container-fluid">
-        {% feincms_render_region feincms_page "footer" request %}
-        {% render_region_tools feincms_page "footer" request %}
+    <div class="container-fluid">
+      <div id="slideshow">
+        <img class="img-responsive" src="{% static 'img/gal1.jpg' %}" name="slide"/>
+        <img class="img-responsive" src="{% static 'img/gal2.jpg' %}" name="slide"/>
+        <img class="img-responsive" src="{% static 'img/gal3.jpg' %}" name="slide"/>
       </div>
+      <div class="galery-footer"></div>
+    </div>
+    <script type="text/javascript">
+    (function(){
+    leonardo.utils.loadResource({
+          src: "{% static 'js/jquery.cycle.js' %}",
+          callback: function(){
+        $(function () {
+          $("document").ready(function(){
+            $("#slideshow").cycle()
+          })
+        });
+      }});
+    })();
+    </script>
+    {% endif %}
+    <footer>
+    <div class="container-fluid">
+      {% feincms_render_region feincms_page "footer" request %}
+      {% render_region_tools feincms_page "footer" request %}
+    </div>
     </footer>
     {% feincms_render_region feincms_page "helper" request %}
     {% include "horizon/_scripts.html" %}

@@ -286,21 +286,28 @@ section.container-fluid {
 }
 
 .section-7 {
-    background-image: url(/static/img/svetly_troj_180d.png), url(/static/img/tmavy_troj_180d_reversed.png);
+    background-image: url(/static/img/svetly_troj_180d.png), url(/static/img/troj_delka.png);
     background-repeat: no-repeat;
     background-position: center top, center bottom;
-    background-size: initial;
+    background-size: 30%, 100%;
 }
 
 .bg-nine {
-    background-image: url(/static/img/kontakt_troj_up.png);
+    background-image: url(/static/img/troj_kontakt.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
     background-size: 100%;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     background-color: transparent;
+}
+
+// footer
+
+footer {
+    padding: 40px 0px 30px 0px;
+    background-image: url(/static/img/bile_pozadi_struktura.jpg);
 }
 
 // scrollbar

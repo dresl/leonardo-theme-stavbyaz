@@ -5,6 +5,7 @@ LEONARDO_APPS = [
 ]
 
 LEONARDO_JS_FILES = [
+    'js/jquery.cycle.js',
     'js/stavbyaz.js',
     'js/background.cycle.js',
 ]
