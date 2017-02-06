@@ -13,16 +13,20 @@
 function centerHTMLtext{{ forloop.counter }}() {
     setTimeout(function(){
         var a = $('.section-{{ forloop.counter }}').height();
-        {% if forloop.counter|divisibleby:2 and forloop.counter <= 7%}
-        var b = $('#preview-{{ forloop.counter }}').children()[0].scrollHeight;
+        {% if forloop.counter|divisibleby:2 and forloop.counter <= 7 %}
+        var b = $('.section-{{ forloop.counter }}').children()[0];
+        b = b.childNodes[1].scrollHeight
         var c = a - b;
         var total = c/2 - 5;
-        $('#preview-{{ forloop.counter }}').children()[0].style.marginTop = total + "px";
+        var x = $('.section-{{ forloop.counter }}').children()[0];
+        x.childNodes[1].style.marginTop = total + "px";
         {% else %}
-        var b = $('#preview-{{ forloop.counter }}').children()[1].scrollHeight;
+        var b = $('.section-{{ forloop.counter }}').children()[0];
+        b = b.childNodes[3].scrollHeight
         var c = a - b;
         var total = c/2 - 5;
-        $('#preview-{{ forloop.counter }}').children()[1].style.marginTop = total + "px";
+        var x = $('.section-{{ forloop.counter }}').children()[0];
+        x.childNodes[3].style.marginTop = total + "px";
         {% endif %}
     }, 1);
 }
