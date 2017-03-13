@@ -1,0 +1,12 @@
+{% extends widget.get_base_template %}
+
+{% block content %}
+{% for item in items %}
+<div id="{{ item.slug }}" class="absolute-anchor"></div>
+<div class="bg-mobile">
+  <div class="container{% if item.layout == 'fluid' %}-fluid{% endif %}">
+    {% include "widget/contextnavigation/_item.html" with item=item  %}
+  </div>
+</div>
+{% endfor %}
+{% endblock %}

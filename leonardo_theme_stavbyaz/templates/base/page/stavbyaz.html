@@ -6,21 +6,45 @@
     {% analytical_head_top %}
     {% include "_header.html" %}
     {% analytical_head_bottom %}
-    {% if request.path == "/" %}
+    {% if request.path == '/' %}
     <script type="text/javascript">
-      $(document).ready(function() {
-        $("body").backgroundCycle({
-          imageUrls: [
-            "{% static 'img/uvodni_fotka_1.jpg'%}",
-            "{% static 'img/uvodni_fotka_2.jpg'%}",
-          ],
-          fadeSpeed: 1000,
-          duration: 4000,
-          backgroundSize: SCALING_MODE_COVER
-        });
-      });
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        window.location.href = "/m/";
+      }
+    </script>
+    {% elif request.path == '/m/' %}
+    <script type="text/javascript">
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      } else {
+      window.location.href = "/";
+      }
     </script>
     {% endif %}
+    <script type="text/javascript">
+      $(document).ready(function() {
+        if (window.location.pathname == '/') {
+          $("body").backgroundCycle({
+            imageUrls: [
+              "{% static 'img/uvodni_fotka_1.jpg'%}",
+              "{% static 'img/uvodni_fotka_2.jpg'%}",
+            ],
+            fadeSpeed: 1000,
+            duration: 4000,
+            backgroundSize: SCALING_MODE_COVER
+          });
+        } else {
+          $("body").backgroundCycle({
+            imageUrls: [
+              "{% static 'img/uvodni_fotka_1_mobile.jpg'%}",
+              "{% static 'img/uvodni_fotka_2_mobile.jpg'%}",
+            ],
+            fadeSpeed: 1000,
+            duration: 4000,
+            backgroundSize: SCALING_MODE_COVER
+          });
+        }
+      });
+    </script>
   </head>
   <body id="{% block body_id %}main_content{% endblock %}" data-spy="scroll" data-target=".navbar-fixed-top" ng-app='horizon.app' ng-strict-di class="">
     <noscript>
@@ -33,13 +57,17 @@
     <div class="navbar navbar-default navbar-fixed-top" id="main_nav">
       <div class="container-fluid">
         {% feincms_render_region feincms_page "header" request %}
+        {% if request.path == '/' %}
         <div class="green-area"></div>
         <div class="white-area"></div>
+        {% endif %}
       </div>
+      {% if request.path == '/' %}
       <div class="arrow-down2"></div>
       <div class="arrow-down"></div>
+      {% endif %}
     </div>
-    {% if request.path == "/" %}
+    {% if request.path == "/" or request.path == '/m/' %}
     <header class="bg-intro">
       <div class="intro-body">
         <div class="container">
@@ -64,8 +92,8 @@
         {% feincms_render_region feincms_page "col2" request %}
         {% render_region_tools feincms_page "col2" request %}
       </section> -->
-    {% if request.path == '/' %}
     </section>
+    {% if request.path == '/' %}
     <div class="container-fluid">
       <div id="slideshow">
         <img class="img-responsive" src="{% static 'img/gal1.jpg' %}" name="slide"/>

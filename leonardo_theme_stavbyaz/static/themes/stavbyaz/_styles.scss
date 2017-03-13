@@ -211,8 +211,9 @@ h1.main_heading {
     background-image: url(/static/img/stavby_troj.png);
     background-position: bottom center;
     background-size: cover;
+    background-repeat: no-repeat;
     z-index: 2;
-    top: 0;
+    top: 1px;
     left: 0;
     right: 0;
 }
@@ -299,6 +300,10 @@ section.container-fluid {
     background-size: 100%;
 }
 
+.bg-mobile {
+    padding: 50px 0px;
+}
+
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     background-color: transparent;
 }
@@ -329,6 +334,11 @@ body::-webkit-scrollbar-track {
 
 /* smartphones */
 @media only screen and (max-width: 760px) {
+    .stavby_troj_AZ {
+        background-image: url(/static/img/stavby_troj_mobile.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
 }
 
 ::-moz-selection {
