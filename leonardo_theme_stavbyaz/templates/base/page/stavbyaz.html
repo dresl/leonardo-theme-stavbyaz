@@ -6,20 +6,17 @@
     {% analytical_head_top %}
     {% include "_header.html" %}
     {% analytical_head_bottom %}
-    {% if request.path == '/' %}
+
     <script type="text/javascript">
-      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && window.location.pathname == '/') {
+        $('body').hide();
         window.location.href = "/m/";
+      } else if (window.location.pathname == '/m/' && !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        $('body').hide();
+        window.location.href = "/";
       }
     </script>
-    {% elif request.path == '/m/' %}
-    <script type="text/javascript">
-      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      } else {
-      window.location.href = "/";
-      }
-    </script>
-    {% endif %}
+
     <script type="text/javascript">
       $(document).ready(function() {
         if (window.location.pathname == '/') {
@@ -94,7 +91,7 @@
       </section> -->
     </section>
     {% if request.path == '/' %}
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding: 0px;">
       <div id="slideshow">
         <img class="img-responsive" src="{% static 'img/gal1.jpg' %}" name="slide"/>
         <img class="img-responsive" src="{% static 'img/gal2.jpg' %}" name="slide"/>
@@ -117,7 +114,7 @@
     </script>
     {% endif %}
     <footer>
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding: none;">
       {% feincms_render_region feincms_page "footer" request %}
       {% render_region_tools feincms_page "footer" request %}
     </div>
