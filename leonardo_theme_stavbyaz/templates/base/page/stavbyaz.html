@@ -99,6 +99,16 @@
       </div>
       <div class="galery-footer"></div>
     </div>
+    {% elif request.path == '/m/' %}
+    <div class="container-fluid" style="padding: 0px;">
+      <div id="slideshow">
+        <img class="img-responsive" src="{% static 'img/gal1-mobile.jpg' %}" name="slide"/>
+        <img class="img-responsive" src="{% static 'img/gal2-mobile.jpg' %}" name="slide"/>
+        <img class="img-responsive" src="{% static 'img/gal3-mobile.jpg' %}" name="slide"/>
+      </div>
+      <div class="galery-footer"></div>
+    </div>
+    {% endif %}
     <script type="text/javascript">
     (function(){
     leonardo.utils.loadResource({
@@ -112,7 +122,6 @@
       }});
     })();
     </script>
-    {% endif %}
     <footer>
     <div class="container-fluid" style="padding: none;">
       {% feincms_render_region feincms_page "footer" request %}

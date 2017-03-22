@@ -4,6 +4,6 @@
 
 {% block content %}
 <div class="navbar-header">
-  <a class="navbar-brand" href="{% if request.path == '/' %}/#main_content{% else %}/{% endif %}"><img class="img-responsive" src='/static/img/logo_ddoskocil.png' alt='logo' /></a>
+  <a class="navbar-brand" href="{% if request.path == '/' or request.path == '/m/' %}/#main_content{% else %}/{% endif %}"><img class="img-responsive" src='/static/img/logo_ddoskocil.png' alt='logo' /></a>
 </div>
 {% endblock %}

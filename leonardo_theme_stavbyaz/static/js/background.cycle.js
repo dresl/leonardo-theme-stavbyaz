@@ -103,6 +103,7 @@ $.fn.backgroundCycle = function(options) {
             'background-size': sizeMode,
             '-moz-background-size': sizeMode,
             '-webkit-background-size': sizeMode,
+            'background-position': '50%',
             position: 'absolute',
             left: marginLeft,
             top: 50+"px",
