@@ -16,7 +16,7 @@
         window.location.href = "/";
       }
     </script>
-
+    {% if request.path == "/" or request.path == '/m/' %}
     <script type="text/javascript">
       $(document).ready(function() {
         if (window.location.pathname == '/') {
@@ -42,6 +42,7 @@
         }
       });
     </script>
+    {% endif %}
   </head>
   <body id="{% block body_id %}main_content{% endblock %}" data-spy="scroll" data-target=".navbar-fixed-top" ng-app='horizon.app' ng-strict-di class="">
     <noscript>
@@ -55,13 +56,13 @@
       <div class="container-fluid">
         {% feincms_render_region feincms_page "header" request %}
         {% if request.path == '/' %}
-        <div class="green-area"></div>
-        <div class="white-area"></div>
+        <!-- <div class="green-area"></div>
+        <div class="white-area"></div> -->
         {% endif %}
       </div>
       {% if request.path == '/' %}
-      <div class="arrow-down2"></div>
-      <div class="arrow-down"></div>
+      <!-- <div class="arrow-down2"></div>
+      <div class="arrow-down"></div> -->
       {% endif %}
     </div>
     {% if request.path == "/" or request.path == '/m/' %}
@@ -90,38 +91,6 @@
         {% render_region_tools feincms_page "col2" request %}
       </section> -->
     </section>
-    {% if request.path == '/' %}
-    <div class="container-fluid" style="padding: 0px;">
-      <div id="slideshow">
-        <img class="img-responsive" src="{% static 'img/gal1.jpg' %}" name="slide"/>
-        <img class="img-responsive" src="{% static 'img/gal2.jpg' %}" name="slide"/>
-        <img class="img-responsive" src="{% static 'img/gal3.jpg' %}" name="slide"/>
-      </div>
-      <div class="galery-footer"></div>
-    </div>
-    {% elif request.path == '/m/' %}
-    <div class="container-fluid" style="padding: 0px;">
-      <div id="slideshow">
-        <img class="img-responsive" src="{% static 'img/gal1-mobile.jpg' %}" name="slide"/>
-        <img class="img-responsive" src="{% static 'img/gal2-mobile.jpg' %}" name="slide"/>
-        <img class="img-responsive" src="{% static 'img/gal3-mobile.jpg' %}" name="slide"/>
-      </div>
-      <div class="galery-footer"></div>
-    </div>
-    {% endif %}
-    <script type="text/javascript">
-    (function(){
-    leonardo.utils.loadResource({
-          src: "{% static 'js/jquery.cycle.js' %}",
-          callback: function(){
-        $(function () {
-          $("document").ready(function(){
-            $("#slideshow").cycle()
-          })
-        });
-      }});
-    })();
-    </script>
     <footer>
     <div class="container-fluid" style="padding: none;">
       {% feincms_render_region feincms_page "footer" request %}

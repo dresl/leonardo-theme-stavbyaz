@@ -1,0 +1,23 @@
+{% extends widget.get_base_template %}
+
+{% load thumbnail %}
+
+{% block content %}
+{% block items %}
+{% for row in widget.get_rows %}
+    {% for item in row %}
+    <div class="col-md-{{ widget.columns_classes.0 }} col-xs-{{ widget.columns_classes.2 }} col-sm-{{ widget.columns_classes.1 }}">
+        <div class="row wrapper-main">
+            <div class="col-xs-12 col-md-7">
+                <img class="img-responsive preview-img" src="{{ item.image.url }}" alt=""/>
+            </div>
+            <div class="col-xs-12 col-md-5 text-left">
+                <h3>{{ item.translation.name }}</h3>
+                <p>{{ item.translation.description|safe }}</p><br>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endfor %}
+{% endblock %}
+{% endblock %}

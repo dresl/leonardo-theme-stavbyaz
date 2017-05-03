@@ -44,6 +44,7 @@ $('a[href="/#main_content"]').bind('click', function(event) {
             $(".white-area").addClass("area-color-responsible");
             $(".telephone-num").css("font-size", "19px")
             $(".telephone-num").css("margin-right", "27px")
+            $(".telephone-num").css("margin-top", "17px")
         } else {
             $(".navbar-fixed-top").removeClass("top-nav-collapse");
             $(".arrow-down").removeClass("arrow-responsible");
@@ -52,7 +53,13 @@ $('a[href="/#main_content"]').bind('click', function(event) {
             $(".white-area").removeClass("area-color-responsible");
             $(".telephone-num").css("font-size", "25px")
             $(".telephone-num").css("margin-right", "0px")
+            $(".telephone-num").css("margin-top", "14px")
         }
     });
 
 })(jQuery); // End of use strict
+
+$(function() {
+    $(".kontakt-inner-content").css("height", $(".section-7").height());
+    $(".kontakt-form input").prop('required',true);
+});
