@@ -398,9 +398,9 @@ section.container-fluid {
         padding: 50px;
         form .buttonHolder input {
             background-color: transparent;
-            color: #139831;
+            color: #8cd200;
             font-weight: bold;
-            border: 2px solid #1ba239;
+            border: 2px solid #8cd200;
             border-radius: 0px;
             padding: 9px 42px;
             margin-top: 30px;
@@ -413,14 +413,14 @@ section.container-fluid {
     }
     .napiste-nam-right-heading {
         position: absolute;
-        top: 45%;
-        right: -70px;
+        right: -61px;
+        margin-top: 188px;
         transform: rotate(90deg);
         border: 1px solid #009622;
-        padding: 7px 23px;
+        padding: 5px 16px;
         background-color: #009622;
         .title {
-            font-size: 25px;
+            font-size: 23px;
             color: white;
             margin: 0;
         }

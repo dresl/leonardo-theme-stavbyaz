@@ -44,7 +44,7 @@ $('a[href="/#main_content"]').bind('click', function(event) {
             $(".white-area").addClass("area-color-responsible");
             $(".telephone-num").css("font-size", "19px")
             $(".telephone-num").css("margin-right", "27px")
-            $(".telephone-num").css("margin-top", "17px")
+            $(".telephone-num").css("margin-top", "18px")
         } else {
             $(".navbar-fixed-top").removeClass("top-nav-collapse");
             $(".arrow-down").removeClass("arrow-responsible");
@@ -53,7 +53,7 @@ $('a[href="/#main_content"]').bind('click', function(event) {
             $(".white-area").removeClass("area-color-responsible");
             $(".telephone-num").css("font-size", "25px")
             $(".telephone-num").css("margin-right", "0px")
-            $(".telephone-num").css("margin-top", "14px")
+            $(".telephone-num").css("margin-top", "16px")
         }
     });
 
