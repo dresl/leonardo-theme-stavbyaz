@@ -42,6 +42,14 @@ h1.main_heading {
 
 // Navigation
 
+.menu-nav-full {
+    display: block;
+}
+
+.menu-nav-mobile {
+    display: none;
+}
+
 #main_nav {
     margin: 0px;
     padding-top: 20px;
@@ -120,6 +128,7 @@ a.btn-aktualni-nabidka {
     margin: 0;
     margin-top: 14px;
     transition: all 0.5s ease;
+    display: block;
 }
 
 #main_nav.top-nav-collapse {
@@ -181,7 +190,7 @@ a.btn-aktualni-nabidka {
 }
 
 // nav green areas
-
+/*
 .arrow-down2 {
     width: 22px;
     position: absolute;
@@ -240,6 +249,7 @@ a.btn-aktualni-nabidka {
     height: 89px;
     transition: all 0.5s ease;
 }
+*/
 
 // intro staby od a po z
 
@@ -258,6 +268,14 @@ a.btn-aktualni-nabidka {
 }
 
 // fullscreen linked page
+
+.linked-page-full {
+    display: block;
+}
+
+.linked-page-mobile {
+    display: none;
+}
 
 .absolute-anchor {
     position: absolute;
@@ -282,7 +300,7 @@ section.container-fluid {
 }
 
 .bg-one {
-    background-image: url(/static/img/2_slide_troj.png);
+    background-image: url(/static/img/o_nas_troj.png);
     background-repeat: no-repeat;
     background-position: bottom center;
     padding-bottom: 200px;
@@ -484,10 +502,11 @@ body::-webkit-scrollbar-track {
             max-height: 100%;
         }
         .navbar-toggle {
+            border-color: #009629;
+            margin-top: -41px;
             &:hover, &:active {
                 background-color: #f5f5f5;
             }
-            border-color: #009629;
             .icon-bar {
                 background-color: #009629;
             }
@@ -499,6 +518,15 @@ body::-webkit-scrollbar-track {
     .absolute-position {
         position: absolute;
         z-index: 5;
+    }
+    .telephone-num {
+        display: none!important;
+    }
+    .linked-page-mobile, .menu-nav-mobile {
+        display: block!important;
+    }
+    .linked-page-full, .menu-nav-full {
+        display: none!important;
     }
 }
 

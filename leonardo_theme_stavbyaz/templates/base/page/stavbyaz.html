@@ -7,7 +7,7 @@
     {% include "_header.html" %}
     {% analytical_head_bottom %}
 
-    <script type="text/javascript">
+<!--     <script type="text/javascript">
       if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && window.location.pathname == '/') {
         $('body').hide();
         window.location.href = "/m/";
@@ -15,11 +15,11 @@
         $('body').hide();
         window.location.href = "/";
       }
-    </script>
-    {% if request.path == "/" or request.path == '/m/' %}
+    </script> -->
+    {% if request.path == "/" %}
     <script type="text/javascript">
       $(document).ready(function() {
-        if (window.location.pathname == '/') {
+        if ($(window).width() > 760) {
           $("body").backgroundCycle({
             imageUrls: [
               "{% static 'img/uvodni_fotka_1.jpg'%}",
@@ -55,17 +55,17 @@
     <div class="navbar navbar-default navbar-fixed-top" id="main_nav">
       <div class="container-fluid">
         {% feincms_render_region feincms_page "header" request %}
-        {% if request.path == '/' %}
-        <!-- <div class="green-area"></div>
-        <div class="white-area"></div> -->
-        {% endif %}
+<!--         {% if request.path == '/' %}
+        <div class="green-area"></div>
+        <div class="white-area"></div>
+        {% endif %} -->
       </div>
-      {% if request.path == '/' %}
-      <!-- <div class="arrow-down2"></div>
-      <div class="arrow-down"></div> -->
-      {% endif %}
+<!--       {% if request.path == '/' %}
+      <div class="arrow-down2"></div>
+      <div class="arrow-down"></div>
+      {% endif %} -->
     </div>
-    {% if request.path == "/" or request.path == '/m/' %}
+    {% if request.path == "/" %}
     <header class="bg-intro">
       <div class="intro-body">
         <div class="container">

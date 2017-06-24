@@ -38,19 +38,19 @@ $('a[href="/#main_content"]').bind('click', function(event) {
     $(window).scroll(function() {
         if ($(".navbar").offset().top > 90) {
             $(".navbar-fixed-top").addClass("top-nav-collapse");
-            $(".arrow-down").addClass("arrow-responsible");
-            $(".arrow-down2").addClass("arrow-responsible");
-            $(".green-area").addClass("area-color-responsible");
-            $(".white-area").addClass("area-color-responsible");
+            // $(".arrow-down").addClass("arrow-responsible");
+            // $(".arrow-down2").addClass("arrow-responsible");
+            // $(".green-area").addClass("area-color-responsible");
+            // $(".white-area").addClass("area-color-responsible");
             $(".telephone-num").css("font-size", "19px")
             $(".telephone-num").css("margin-right", "27px")
             $(".telephone-num").css("margin-top", "18px")
         } else {
             $(".navbar-fixed-top").removeClass("top-nav-collapse");
-            $(".arrow-down").removeClass("arrow-responsible");
-            $(".arrow-down2").removeClass("arrow-responsible");
-            $(".green-area").removeClass("area-color-responsible");
-            $(".white-area").removeClass("area-color-responsible");
+            // $(".arrow-down").removeClass("arrow-responsible");
+            // $(".arrow-down2").removeClass("arrow-responsible");
+            // $(".green-area").removeClass("area-color-responsible");
+            // $(".white-area").removeClass("area-color-responsible");
             $(".telephone-num").css("font-size", "25px")
             $(".telephone-num").css("margin-right", "0px")
             $(".telephone-num").css("margin-top", "16px")
