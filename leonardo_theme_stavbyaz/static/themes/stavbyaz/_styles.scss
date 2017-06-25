@@ -35,7 +35,7 @@ a:focus, a:visited, a:active {
 
 h1.main_heading {
     font-family: Myriad;
-    font-size: 40px;
+    font-size: 75px;
     font-weight: bold;
     color: white;
 }
@@ -98,10 +98,16 @@ h1.main_heading {
     background-color: white;
     padding: 20px 4px;
     border: 1px solid #e8e8e8;
-    min-height: 325px;
+    min-height: 360px;
     margin: 0!important;
     .preview-img {
         padding: 15px;
+    }
+    .text-content {
+        padding: 15px;
+        h3 {
+            margin: 0px;
+        }
     }
 }
 
@@ -574,8 +580,16 @@ body::-webkit-scrollbar-track {
             }
         }
     }
+    .main_heading {
+        font-size: 45px!important;
+        font-weight: bold!important;
+        margin-top: -30px!important;
+    }
     #main_nav .navbar-brand {
         width: 100%;
+    }
+    .kontakt-form.mobile-form {
+        padding: 20px!important;
     }
     .absolute-position {
         position: absolute;

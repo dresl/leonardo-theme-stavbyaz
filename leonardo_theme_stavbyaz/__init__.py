@@ -9,5 +9,8 @@ LEONARDO_JS_FILES = [
     'js/stavbyaz.js',
     'js/background.cycle.js',
 ]
+
+LEONARDO_ORDERING = -3
+
 LEONARDO_SCSS_FILES = []
 LEONARDO_CSS_FILES = []
