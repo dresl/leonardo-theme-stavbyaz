@@ -79,7 +79,7 @@
 $('a.page-scroll-nav').bind('click', function(event) {
     var $anchor = $(this);
     $('html, body').stop().animate({
-        scrollTop: ($($anchor.attr('href').replace("/", "")).offset().top - 20)
+        scrollTop: ($($anchor.attr('href').replace("/", "")).offset().top)
     }, 1500, 'easeInOutExpo');
     event.preventDefault();
 });
