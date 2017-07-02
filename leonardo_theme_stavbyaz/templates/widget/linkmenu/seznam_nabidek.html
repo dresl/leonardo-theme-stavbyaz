@@ -8,8 +8,10 @@
     {% for item in row %}
     <div class="col-md-{{ widget.columns_classes.0 }} col-xs-{{ widget.columns_classes.2 }} col-sm-{{ widget.columns_classes.1 }}">
         <div class="row wrapper-main">
-            <div class="col-xs-12 col-md-7">
-                <img class="img-responsive preview-img" src="{{ item.image.url }}" alt=""/>
+            <div class="col-xs-12 col-md-5">
+                {% thumbnail item.image.file widget.thumb_geom format="PNG" as image %}
+                <img class="img-responsive preview-img" itemprop="thumbnail" src="{{ image.url }}" alt="" />
+                {% endthumbnail %}
             </div>
             <div class="text-content">
                 <h3>{{ item.translation.name|safe }}</h3>
@@ -17,7 +19,7 @@
             </div>
             {% if item.web_address != "." %}
             <div class="col-xs-11 text-right">
-            <a class="btn btn-default" href="{{ item.web_address }}">Číst více</a>
+            <a class="btn-aktualni-nabidka" href="{{ item.web_address }}">Číst více</a>
             </div>
             {% endif %}
         </div>
