@@ -92,6 +92,12 @@ h1.main_heading {
     }
 }
 
+@media only screen and (max-width: 1366px) {
+    #main_nav {
+        padding-bottom: 0px;
+    }
+}
+
 // nabidky
 
 .row.wrapper-main {
@@ -608,12 +614,12 @@ body::-webkit-scrollbar-track {
 
 ::-moz-selection {
     text-shadow: none;
-    background: rgba($primary, 0.6);
+    background: rgba(#CCC, 0.6);
     color: white;
 }
 
 ::selection {
     text-shadow: none;
-    background: rgba($primary, 0.6);
+    background: rgba(#CCC, 0.6);
     color: white;
 }
