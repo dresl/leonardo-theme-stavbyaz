@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-23 12:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/403.html:20
+msgid "Permission Denied"
+msgstr ""
+
+#: templates/403.html:24
+msgid "You do not have permission for this page."
+msgstr ""
+
+#: templates/403.html:29 templates/404.html:31 templates/500.html:25
+msgid "Create Page with the "
+msgstr ""
+
+#: templates/403.html:29 templates/404.html:31 templates/500.html:25
+msgid "slug"
+msgstr ""
+
+#: templates/404.html:20
+msgid "The requested page cannot be found"
+msgstr ""
+
+#: templates/404.html:25
+msgid "The URL is incorrect"
+msgstr ""
+
+#: templates/404.html:26
+msgid "The page or file has been moved or is no longer available"
+msgstr ""
+
+#: templates/500.html:20
+msgid "Internal Server Error"
+msgstr ""
+
+#: templates/base/page/_actions.html:7 templates/base/page/_actions.html:8
+msgid "Create Page"
+msgstr ""
+
+#: templates/base/page/_actions.html:7
+msgid "Child Page"
+msgstr ""
+
+#: templates/base/page/_actions.html:8
+msgid "Root Page"
+msgstr ""
+
+#: templates/base/page/_actions.html:10
+msgid "Edit Page"
+msgstr ""
+
+#: templates/base/page/_actions.html:12
+msgid "Add Widget"
+msgstr ""
+
+#: templates/base/page/_actions.html:16 templates/base/page/_actions.html:23
+#: templates/base/page/_actions.html:35
+msgid "Page Admin"
+msgstr ""
+
+#: templates/base/page/_actions.html:23
+msgid "Page Admin in new window"
+msgstr ""
+
+#: templates/base/page/_actions.html:26
+msgid "Mass Update"
+msgstr ""
+
+#: templates/base/page/_actions.html:29
+msgid "Delete Page"
+msgstr ""
+
+#: templates/base/page/_actions.html:29
+msgid "Delete"
+msgstr ""
+
+#: templates/base/page/_actions.html:35
+msgid "Pages"
+msgstr ""
+
+#: templates/base/page/_actions.html:38
+msgid "Admin"
+msgstr ""
+
+#: templates/base/page/stavbyaz.html:50
+msgid "This application requires JavaScript to be enabled in your web browser."
+msgstr ""
+
+#: templates/leonardo_auth/_actions.html:5
+msgid "Stop Editing"
+msgstr ""
+
+#: templates/leonardo_auth/_actions.html:7
+msgid "Start Editing"
+msgstr ""
+
+#: templates/leonardo_auth/_actions.html:17
+msgid "Logout"
+msgstr ""
